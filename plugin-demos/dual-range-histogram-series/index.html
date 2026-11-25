@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dual range histogram series Plugin Example</title>
+		<style>html,body{color:#131722;background-color:#f8f9fd;height:100%;margin:0;padding:0;font-family:system-ui,-apple-system,sans-serif;overflow:hidden}body{flex-direction:column;display:flex}#controls{flex-wrap:wrap;align-items:center;gap:16px;padding:8px 12px;font-size:13px;display:flex}#controls label{align-items:center;gap:6px;display:flex}#chart{flex:auto;min-height:0}</style>
+		<script type="module" crossorigin src="./assets/main-DBI0yIvA.js"></script>
+	</head>
+	<body>
+		<div id="controls">
+			<label>
+				Scale mode
+				<select id="scale-mode">
+					<option value="pixels" selected>pixels</option>
+					<option value="price">price</option>
+				</select>
+			</label>
+			<label>
+				Normalize
+				<select id="normalize">
+					<option value="visible" selected>visible</option>
+					<option value="all">all</option>
+					<option value="fixed">fixed (400)</option>
+				</select>
+			</label>
+			<label>
+				Radius
+				<input id="radius" type="range" min="0" max="12" step="1" value="2" />
+				<output id="radius-value">2</output>
+			</label>
+			<label>
+				Gap
+				<input id="gap" type="range" min="0" max="20" step="1" value="0" />
+				<output id="gap-value">0</output>
+			</label>
+		</div>
+		<div id="chart"></div>
+	</body>
+</html>
